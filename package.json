@@ -1,0 +1,25 @@
+{
+  "name": "portefolio",
+  "version": "1.0.0",
+  "description": "Projet PorteFolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch  --style=expanded scss/:dist/css/",
+    "sass-m": "sass --watch  --style=compressed scss/:dist/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierreHardy99/portefolio.git"
+  },
+  "author": "Pierre Hardy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PierreHardy99/portefolio/issues"
+  },
+  "homepage": "https://github.com/PierreHardy99/portefolio#readme",
+  "dependencies": {
+    "@icon/icofont": "^1.0.1-alpha.1",
+    "minireset.css": "^0.0.7",
+    "sass": "^1.52.1"
+  }
+}
