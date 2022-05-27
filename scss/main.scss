@@ -2,7 +2,119 @@
 @import 'partials/tools';
 @import 'partials/variables';
 
-
-p {
-  color:red;
+* {
+  scroll-behavior: smooth;
 }
+
+.header {
+  #buttonId {
+    position: absolute;
+    background-color: #4c96d7;
+    color: inherit;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    right: 15px;
+    top: 15px;
+    padding-left: 5px;
+    z-index: 5;
+    transition-duration: 0.1s;
+    text-decoration: none;
+    overflow: hidden;
+
+    span {
+      display: block;
+      position: relative;
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      color: inherit;
+      margin: 5px 5px;
+    }
+
+    &:after {
+      content: "";
+      background: rgb(12, 78, 201);
+      display: block;
+      position: absolute;
+      padding-top: 300%;
+      padding-left: 350%;
+      margin-left: -20px!important;
+      margin-top: -120%;
+      opacity: 0;
+      transition: all 0.4s
+    }
+
+    &:active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 1s
+    }
+
+  }
+
+  #navigation {
+    display:none;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+
+    ul li {
+      text-align: center;
+    }
+
+    a {
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 400;
+      padding: 10px 0px 10px 0px;
+      display: block;
+      margin-left: 15px;
+      padding-right: 15px;
+      font-family: 'Arial', serif;
+      color: #3c23b2;
+      background-color: inherit;
+    }
+
+    &.open {
+      display: block;
+      color: inherit;
+      padding-top: 15px;
+      transition: all 0.5s;
+    }
+  }
+}
+
+@media #{$tablet} {
+  .header {
+
+    #navigation {
+      display: block;
+
+      ul{
+        text-align: center;
+
+        li {
+          display: inline-block;
+        }
+
+      }
+
+    }
+
+    #buttonId {
+      display: none;
+
+    }
+
+  }
+
+}
+
+
+
+
+
+

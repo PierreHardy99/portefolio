@@ -16,9 +16,15 @@
     <title>Mon Site Web</title>
 </head>
 <body>
-<header class="header-index">
+<header class="header">
+
+    <button id="buttonId">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <!--navbar-->
-    <nav>
+    <nav id="navigation">
         <ul>
             <li><a href="index.html">About me</a></li>
             <li><a href="skills.html">Skills</a></li>
@@ -29,6 +35,18 @@
         </ul>
     </nav>
 </header>
+<main>
+    <h1>About me</h1>
+    <section>
+        <article class="card">
+            <div class="card__content">
+                <h3 class="card__title">First Project</h3>
+                <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, reprehenderit! Neque
+                    consequatur velit...</p>
+            </div>
+        </article>
+    </section>
+</main>
 <footer>
     <div>
         <p>PorteFolio</p>
@@ -48,5 +66,7 @@
         </p>
     </div>
 </footer>
+
+<script src="js/nav.js"></script>
 </body>
 </html>
