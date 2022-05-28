@@ -6,10 +6,19 @@
   scroll-behavior: smooth;
 }
 
-.header {
+header {
+
+  background-color: #242323;
+
+  border-bottom: 1px solid #BAAF9A;
+
+  height: 4rem;
+
+  color: $white;
+
   #buttonId {
     position: absolute;
-    background-color: #4c96d7;
+    background-color: inherit;
     color: inherit;
     width: 40px;
     height: 40px;
@@ -18,7 +27,7 @@
     right: 15px;
     top: 15px;
     padding-left: 5px;
-    z-index: 5;
+    z-index: 2;
     transition-duration: 0.1s;
     text-decoration: none;
     overflow: hidden;
@@ -33,24 +42,8 @@
       margin: 5px 5px;
     }
 
-    &:after {
-      content: "";
-      background: rgb(12, 78, 201);
-      display: block;
-      position: absolute;
-      padding-top: 300%;
-      padding-left: 350%;
-      margin-left: -20px!important;
-      margin-top: -120%;
-      opacity: 0;
-      transition: all 0.4s
-    }
-
-    &:active:after {
-      padding: 0;
-      margin: 0;
-      opacity: 1;
-      transition: 1s
+    &:checked  {
+      display: none;
     }
 
   }
@@ -58,48 +51,58 @@
   #navigation {
     display:none;
     position: sticky;
-    top: 0px;
-    z-index: 3;
 
     ul li {
       text-align: center;
+      background-color: #242323;
+      border-bottom: 1px solid #BAAF9A;
     }
 
     a {
       font-size: 15px;
       text-transform: uppercase;
       font-weight: 400;
-      padding: 10px 0px 10px 0px;
       display: block;
       margin-left: 15px;
-      padding-right: 15px;
-      font-family: 'Arial', serif;
-      color: #3c23b2;
+      padding: 10px 15px 10px 0;
+      color: #BAAF9A;
       background-color: inherit;
+      text-decoration: none;
     }
 
     &.open {
       display: block;
       color: inherit;
-      padding-top: 15px;
-      transition: all 0.5s;
+      padding-top: 4rem;
     }
   }
 }
 
 @media #{$tablet} {
-  .header {
+  header {
 
     #navigation {
-      display: block;
+      display: flex;
+      position: absolute;
+
+      justify-content: space-between;
+      align-items: center;
+      height: 7vh;
+      padding: 0 1rem;
 
       ul{
         text-align: center;
 
         li {
           display: inline-block;
+
+          border: none;
         }
 
+      }
+
+      &.open {
+        display: none;
       }
 
     }

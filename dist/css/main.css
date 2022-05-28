@@ -78,9 +78,15 @@ th {
   scroll-behavior: smooth;
 }
 
-.header #buttonId {
+header {
+  background-color: #242323;
+  border-bottom: 1px solid #BAAF9A;
+  height: 4rem;
+  color: #fff;
+}
+header #buttonId {
   position: absolute;
-  background-color: #4c96d7;
+  background-color: inherit;
   color: inherit;
   width: 40px;
   height: 40px;
@@ -89,12 +95,12 @@ th {
   right: 15px;
   top: 15px;
   padding-left: 5px;
-  z-index: 5;
+  z-index: 2;
   transition-duration: 0.1s;
   text-decoration: none;
   overflow: hidden;
 }
-.header #buttonId span {
+header #buttonId span {
   display: block;
   position: relative;
   width: 20px;
@@ -103,63 +109,55 @@ th {
   color: inherit;
   margin: 5px 5px;
 }
-.header #buttonId:after {
-  content: "";
-  background: rgb(12, 78, 201);
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.4s;
+header #buttonId:checked {
+  display: none;
 }
-.header #buttonId:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 1s;
-}
-.header #navigation {
+header #navigation {
   display: none;
   position: sticky;
-  top: 0px;
-  z-index: 3;
 }
-.header #navigation ul li {
+header #navigation ul li {
   text-align: center;
+  background-color: #242323;
+  border-bottom: 1px solid #BAAF9A;
 }
-.header #navigation a {
+header #navigation a {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 400;
-  padding: 10px 0px 10px 0px;
   display: block;
   margin-left: 15px;
-  padding-right: 15px;
-  font-family: "Arial", serif;
-  color: #3c23b2;
+  padding: 10px 15px 10px 0;
+  color: #BAAF9A;
   background-color: inherit;
+  text-decoration: none;
 }
-.header #navigation.open {
+header #navigation.open {
   display: block;
   color: inherit;
-  padding-top: 15px;
-  transition: all 0.5s;
+  padding-top: 4rem;
 }
 
 @media screen and (min-width: 768px) {
-  .header #navigation {
-    display: block;
+  header #navigation {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    padding: 0 1rem;
   }
-  .header #navigation ul {
+  header #navigation ul {
     text-align: center;
   }
-  .header #navigation ul li {
+  header #navigation ul li {
     display: inline-block;
+    border: none;
   }
-  .header #buttonId {
+  header #navigation.open {
+    display: none;
+  }
+  header #buttonId {
     display: none;
   }
 }
