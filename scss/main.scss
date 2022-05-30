@@ -258,9 +258,13 @@ h2,h3 {
     width: 100%;
     margin: auto;
 
-    form,iframe {
+    form {
       max-width: 440px;
       margin-bottom: 2rem;
+    }
+
+    iframe {
+      width: 330px;
     }
 
     div {
