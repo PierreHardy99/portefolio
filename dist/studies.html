@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,46 +7,57 @@
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- IcoFont -->
     <link rel="stylesheet" href="../node_modules/@icon/icofont/icofont.css">
-
     <!--Custom CSS-->
     <link rel="stylesheet" href="css/main.css">
-    <title>Mon Site Web</title>
+    <title>PorteFolio | About Me</title>
 </head>
 <body>
-<header class="header-index">
-    <!--navbar-->
-    <nav>
-        <ul>
-            <li><a href="index.html">About me</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="studies.html">Studies</a></li>
-            <li><a href="portefolio.html">PorteFolio</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+<header class="top-nav">
+    <p>PorteFolio</p>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+        <span class='menu-button'></span>
+    </label>
+    <ul class="menu">
+        <li><a href="index.html" class="active">About me</a></li>
+        <li><a href="skills.html" >Skills</a></li>
+        <li><a href="studies.html">Studies</a></li>
+        <li><a href="portefolio.html">PorteFolio</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 </header>
+
+<main>
+    <section class="banner">
+        <h1>Studies</h1>
+    </section>
+
+    <section class="about">
+        <h3></h3>
+        <p></p>
+    </section>
+
+</main>
+
 <footer>
     <div>
-        <p>PorteFolio</p>
-        <p>
-            Rue du portefolio<br>
-            59874 - PorteFolio<br>
-            +32123 45 67 89
-        </p>
+        <h2>Social</h2>
+        <ul>
+            <li><a href=""><i class="icofont icofont-facebook"></i></a><li>
+            <li><a href=""><i class="icofont icofont-twitter"></i></a><li>
+            <li><a href=""><i class="icofont icofont-linkedin"></i></a><li>
+            <li><a href=""><i class="icofont icofont-instagram"></i></a><li>
+        </ul>
+        <p>Copyright © 2022  All Rights Reserved.</p>
     </div>
-    <div>
-        <p>Social</p>
-        <p>
-            <a href="index.html">Home</a><br>
-            <a href="galery.html">Gallery</a><br>
-            <a href="">Planning</a><br>
-            <a href="">Contact</a>
-        </p>
+    <div id="top">
+        <i class="icofont icofont-arrow-up"></i>
     </div>
 </footer>
+<script src="js/buttonUp.js"></script>
 </body>
 </html>
