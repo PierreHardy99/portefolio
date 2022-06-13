@@ -21,6 +21,12 @@ h2,h3 {
   padding-top: 1rem;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 
 // nav
 .top-nav {
@@ -67,8 +73,6 @@ h2,h3 {
       font-size: 0.94rem;
 
       @media #{$desktop} {
-
-        font-size: 1rem;
 
         &:hover {
           color: firebrick;
@@ -189,7 +193,7 @@ h2,h3 {
     justify-content: center;
     align-items: center;
     height: 80vh;
-    font-size: 3rem;
+    font-size: 1.92rem;
 
     @media #{$tablet} {
       font-size: 4vw;
@@ -243,32 +247,90 @@ h2,h3 {
   }
 }
 
+//skills
+.skills {
+  padding: 0 20px;
+  margin: 1.5rem 0;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    display: block;
+
+    @media #{$desktop} {
+      display: flex;
+    }
+    div {
+      width: 25rem;
+    }
+  }
+
+
+  .skill-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: $theme-color;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+
+  .skill-bar {
+    height: 14px;
+    background: $theme-color;
+    border-radius: 3px;
+  }
+
+  .skill-per {
+    height: 14px;
+    background: $red;
+    border-radius: 3px;
+    position: relative;
+
+    &::before {
+      content: attr(per);
+      color: $primary-color;
+      position: relative;
+      padding: 4px 6px;
+      background: $theme-color;
+      border-radius: 4px;
+      font-size: 12px;
+      top: -35px;
+      left: 100%;
+    }
+  }
+}
+
+// PorteFolio
+.portefolio {
+  .container {
+    div {
+      margin: 1rem;
+      img {
+        width: 300px;
+        height: 165px;
+        margin: 0 auto;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
 //contact
 .contact {
   color: black;
   background-color: $primary-color;
 
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    border-radius:5px;
-    padding:20px;
-    width: 100%;
-    margin: auto;
 
-    form {
+    div {
       max-width: 440px;
-      margin-bottom: 2rem;
+      margin: 2rem;
     }
 
     iframe {
-      width: 330px;
-    }
-
-    div {
-      margin: 0 2rem;
+      max-width: 80vw;
     }
 
     input[type=text], textarea, input[type=email] {
@@ -300,9 +362,7 @@ h2,h3 {
         background-color: $red;
         transition: 0.5s;
       }
-
     }
-
   }
 }
 

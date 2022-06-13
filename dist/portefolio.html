@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/css/lightgallery-bundle.min.css">
     <!-- IcoFont -->
     <link rel="stylesheet" href="../node_modules/@icon/icofont/icofont.css">
     <!--Custom CSS-->
     <link rel="stylesheet" href="css/main.css">
-    <title>PorteFolio | About Me</title>
+    <title>PorteFolio | PorteFolio</title>
 </head>
 <body>
 <header class="top-nav">
@@ -36,9 +37,47 @@
         <h1>PorteFolio</h1>
     </section>
 
-    <section class="about">
-        <h3></h3>
-        <p></p>
+    <section id="lightgallery" class="portefolio">
+        <h3>Our gallery</h3>
+        <div class="container">
+            <div class="item" data-src="img/portefolio/code-1076533_1920.jpg">
+                <img src="img/portefolio/code-1076533_1920.jpg" alt="code-1076533_1920">
+            </div>
+            <div class="item" data-src="img/portefolio/code-g1a1fe0d48_1920.jpg">
+                <img src="img/portefolio/code-g1a1fe0d48_1920.jpg" alt="code-g1a1fe0d48_1920">
+            </div>
+            <div class="item" data-src="img/portefolio/hacking-gfe2520e22_1920.jpg">
+                <img src="img/portefolio/hacking-gfe2520e22_1920.jpg" alt="hacking-gfe2520e22_1920">
+            </div>
+            <div class="item" data-src="img/portefolio/laptop-gb40abf408_1920.jpg">
+                <img src="img/portefolio/laptop-gb40abf408_1920.jpg" alt="laptop-gb40abf408_1920">
+            </div>
+            <div class="item" data-src="img/portefolio/mobile-ga2940a897_1920.jpg">
+                <img src="img/portefolio/mobile-ga2940a897_1920.jpg" alt="mobile-ga2940a897_1920">
+            </div>
+            <div class="item" data-src="img/portefolio/monitor-gedb00be90_1920.jpg">
+                <img src="img/portefolio/monitor-gedb00be90_1920.jpg" alt="monitor-gedb00be90_1920">
+            </div>
+            <div class="item" data-src="img/portefolio/office-g5a8fd322a_1920.jpg">
+                <img src="img/portefolio/office-g5a8fd322a_1920.jpg" alt="office-g5a8fd322a_1920">
+            </div>
+            <div class="item" data-src="img/portefolio/programmer-1653351.png">
+                <img src="img/portefolio/programmer-1653351.png" alt="programmer-1653351">
+            </div>
+            <div class="item" data-src="img/portefolio/search-engine-optimization-586422_1920.jpg">
+                <img src="img/portefolio/search-engine-optimization-586422_1920.jpg" alt="search-engine-optimization-586422_1920">
+            </div>
+            <div class="item" data-src="img/portefolio/seo-896175_1920.png">
+                <img src="img/portefolio/seo-896175_1920.png" alt="seo-896175_1920">
+            </div>
+            <div class="item" data-src="img/portefolio/software-developer-g0aa61a762_1920.jpg">
+                <img src="img/portefolio/software-developer-g0aa61a762_1920.jpg" alt="software-developer-g0aa61a762_1920">
+            </div>
+            <div class="item" data-src="img/portefolio/system-gf2886637f_1920.jpg">
+                <img src="img/portefolio/system-gf2886637f_1920.jpg" alt="system-gf2886637f_1920">
+            </div>
+
+
     </section>
 
 </main>
@@ -58,6 +97,17 @@
         <i class="icofont icofont-arrow-up"></i>
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/lightgallery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/plugins/thumbnail/lg-thumbnail.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/plugins/zoom/lg-zoom.min.js"></script>
 <script src="js/buttonUp.js"></script>
+<script type="text/javascript">
+        lightGallery(document.getElementById('lightgallery'), {
+            plugins: [lgZoom, lgThumbnail],
+            selector: '.item',
+            licenseKey: 'your_license_key',
+            speed: 500,
+        });
+</script>
 </body>
 </html>
