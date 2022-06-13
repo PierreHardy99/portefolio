@@ -319,7 +319,7 @@ h2, h3 {
   }
 }
 .skills .container div {
-  width: 25rem;
+  max-width: 25rem;
 }
 .skills .skill-name {
   font-size: 18px;
