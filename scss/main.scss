@@ -91,7 +91,7 @@ section {
   }
 }
 
-// button
+/* Button */
 .menu-button-container {
   display: none;
   height: 100%;
@@ -297,8 +297,7 @@ section {
     border-radius: 3px;
     position: relative;
 
-    &::before {
-      content: attr(per);
+    span {
       color: $primary-color;
       position: relative;
       padding: 4px 6px;
