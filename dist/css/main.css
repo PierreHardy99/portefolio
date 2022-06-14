@@ -120,6 +120,9 @@ section {
   font-size: 1rem;
   font-weight: 700;
 }
+.top-nav p a {
+  color: #DAECF2;
+}
 
 .menu {
   display: flex;
