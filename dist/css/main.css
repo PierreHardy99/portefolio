@@ -74,6 +74,7 @@ th {
   padding: 0;
 }
 
+/* General style */
 body {
   scroll-behavior: smooth;
   font-family: "Oxygen", sans-serif;
@@ -84,7 +85,8 @@ a {
   color: orangered;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-weight: 700;
   font-size: 1.3rem;
   text-align: center;
@@ -102,6 +104,7 @@ section {
   color: #242323;
 }
 
+/* Nav */
 .top-nav {
   display: flex;
   flex-direction: row;
@@ -133,9 +136,7 @@ section {
   color: orangered;
 }
 .menu > li > a {
-  font-size: 10px;
   text-transform: uppercase;
-  font-weight: 200;
   display: block;
   margin-left: 15px;
   color: #BAAF9A;
@@ -187,16 +188,17 @@ section {
 }
 
 #menu-toggle:checked + .menu-button-container .menu-button::before {
-  margin-top: 0px;
+  margin-top: 0;
   transform: rotate(45deg);
 }
 
 #menu-toggle:checked + .menu-button-container .menu-button {
+  /* Middle line of the button */
   background-color: inherit;
 }
 
 #menu-toggle:checked + .menu-button-container .menu-button::after {
-  margin-top: 0px;
+  margin-top: 0;
   transform: rotate(-45deg);
 }
 
@@ -245,6 +247,7 @@ section {
     border-bottom: 1px solid #242323;
   }
 }
+/* Banner */
 .banner {
   background-image: url("../img/brg.png");
   background-size: cover;
@@ -269,6 +272,7 @@ section {
   }
 }
 
+/* About Me */
 .about h3 {
   background-color: #DAECF2;
 }
@@ -307,6 +311,7 @@ section {
   border-radius: 5%;
 }
 
+/* Skills */
 .skills {
   padding: 1.5rem;
 }
@@ -351,6 +356,27 @@ section {
   left: 100%;
 }
 
+/* Studies */
+.studies .container > div {
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 800px;
+  border: 1px solid #242323;
+  box-shadow: 0 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.studies .container > div p {
+  margin: 1rem 0;
+}
+.studies .container > div img {
+  margin: 0 auto;
+}
+
+/* PorteFolio */
 .portefolio .container div {
   margin: 1rem;
 }
@@ -361,19 +387,23 @@ section {
   border-radius: 5px;
 }
 
+/* contact */
 .contact .container div {
-  max-width: 440px;
+  max-width: 600px;
   margin: 2rem;
 }
 .contact .container iframe {
-  max-width: 80vw;
+  width: 25rem;
+  height: 25rem;
 }
 @media screen and (min-width: 992px) {
   .contact .container iframe {
     margin-top: 2rem;
   }
 }
-.contact .container input[type=text], .contact .container textarea, .contact .container input[type=email] {
+.contact .container input[type=text],
+.contact .container textarea,
+.contact .container input[type=email] {
   width: 100%;
   padding: 12px;
   border: 1px solid #DAECF2;
@@ -401,13 +431,19 @@ section {
   transition: 0.5s;
 }
 
+/* testimonials */
 .testimonials {
   color: #242323;
 }
 .testimonials img {
-  width: 2.5rem;
+  width: 15rem;
   clip-path: ellipse(33% 50%);
   border-radius: 50%;
+  vertical-align: center;
+}
+.testimonials .image {
+  display: flex;
+  justify-content: center;
 }
 .testimonials .container > div {
   background-color: orangered;
@@ -415,13 +451,25 @@ section {
   border-radius: 5px;
   max-width: 600px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1rem;
+  text-align: center;
+}
+.testimonials .container > div .info {
+  width: 100%;
+  border-bottom: #333 1px solid;
+}
+.testimonials .container > div p {
+  text-align: left;
 }
 .testimonials .container > div > div {
-  margin-right: 1rem;
-  padding: 1rem;
+  margin-bottom: 0.5rem;
 }
 
+/* footer */
 footer {
   color: #DAECF2;
   background-color: #242323;

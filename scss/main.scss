@@ -3,7 +3,7 @@
 @import 'partials/variables';
 
 
-// general style
+/* General style */
 body {
   scroll-behavior: smooth;
   font-family: 'Oxygen', sans-serif;
@@ -14,7 +14,8 @@ a {
   color: $red
 }
 
-h2,h3 {
+h2,
+h3 {
   font-weight: 700;
   font-size: 1.3rem;
   text-align: center;
@@ -33,7 +34,7 @@ section {
 }
 
 
-// nav
+/* Nav */
 .top-nav {
   display: flex;
   flex-direction: row;
@@ -59,17 +60,16 @@ section {
   margin: 0;
   padding: 0;
 
-  & > li {
+  &>li {
     margin: 0 0.4rem;
     overflow: hidden;
+
     .active {
       color: $red;
     }
 
-    & > a {
-      font-size: 10px;
+    &>a {
       text-transform: uppercase;
-      font-weight: 200;
       display: block;
       margin-left: 15px;
       color: #BAAF9A;
@@ -125,18 +125,18 @@ section {
   margin-top: 8px;
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::before {
-  margin-top: 0px;
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+  margin-top: 0;
   transform: rotate(45deg);
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button {
-  // Middle line of the button
+#menu-toggle:checked+.menu-button-container .menu-button {
+  /* Middle line of the button */
   background-color: inherit;
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::after {
-  margin-top: 0px;
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+  margin-top: 0;
   transform: rotate(-45deg);
 }
 
@@ -144,6 +144,7 @@ section {
   .menu-button-container {
     display: flex;
   }
+
   .menu {
     position: absolute;
     top: 0;
@@ -154,20 +155,23 @@ section {
     justify-content: center;
     align-items: center;
   }
-  #menu-toggle ~ .menu li {
+
+  #menu-toggle~.menu li {
     height: 0;
     margin: 0;
     padding: 0;
     border: 0;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  #menu-toggle:checked ~ .menu li {
+
+  #menu-toggle:checked~.menu li {
     border: 1px solid #333;
     height: 2.5em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  .menu > li {
+
+  .menu>li {
     display: flex;
     justify-content: center;
     margin: 0;
@@ -176,12 +180,13 @@ section {
     color: $primary-color;
     background-color: $theme-color;
   }
-  .menu > li:not(:last-child) {
+
+  .menu>li:not(:last-child) {
     border-bottom: 1px solid $theme-color;
   }
 }
 
-// banner
+/* Banner */
 .banner {
   background-image: url("../img/brg.png");
   background-size: cover;
@@ -206,11 +211,12 @@ section {
   }
 }
 
-// About Me
+/* About Me */
 .about {
   h3 {
     background-color: $primary-color;
   }
+
   .about-container {
     padding: 1rem 1rem 1rem 0.5rem;
     color: $theme-color;
@@ -229,6 +235,7 @@ section {
       border-radius: 8px;
       margin: 1rem;
       max-width: 25rem;
+
       h3 {
         margin: 1rem 0.5rem;
       }
@@ -242,7 +249,7 @@ section {
         display: block;
         width: 15rem;
         height: 15rem;
-        margin:  1rem auto;
+        margin: 1rem auto;
         border-radius: 5%;
       }
 
@@ -251,7 +258,7 @@ section {
   }
 }
 
-//skills
+/* Skills */
 .skills {
   padding: 1.5rem;
 
@@ -259,8 +266,9 @@ section {
     margin-bottom: 1rem;
   }
 
-  .container > div {
+  .container>div {
     width: 24rem;
+
     @media #{$tablet} {
       margin: 0 2rem;
     }
@@ -300,11 +308,35 @@ section {
   }
 }
 
-// PorteFolio
+/* Studies */
+.studies {
+  .container > div {
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 800px;
+    border: 1px solid $theme-color;
+    box-shadow: 0 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      margin: 1rem 0;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+/* PorteFolio */
 .portefolio {
   .container {
     div {
       margin: 1rem;
+
       img {
         width: 300px;
         height: 165px;
@@ -315,24 +347,28 @@ section {
   }
 }
 
-//contact
+/* contact */
 .contact {
 
   .container {
 
     div {
-      max-width: 440px;
+      max-width: 600px;
       margin: 2rem;
     }
 
     iframe {
-      max-width: 80vw;
+      width: 25rem;
+      height: 25rem;
+
       @media #{$desktop} {
         margin-top: 2rem;
       }
     }
 
-    input[type=text], textarea, input[type=email] {
+    input[type=text],
+    textarea,
+    input[type=email] {
       width: 100%;
       padding: 12px;
       border: 1px solid $primary-color;
@@ -344,6 +380,7 @@ section {
     textarea {
       height: 200px;
     }
+
     label {
       width: 100%;
       color: $theme-color;
@@ -365,31 +402,54 @@ section {
   }
 }
 
-// testimonials
+/* testimonials */
 .testimonials {
   color: $theme-color;
+
   img {
-    width: 2.5rem;
+    width: 15rem;
     clip-path: ellipse(33% 50%);
     border-radius: 50%;
+    vertical-align: center;
   }
-  .container > div {
+
+  .image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container>div {
     background-color: $red;
     margin: 2rem;
     border-radius: 5px;
     max-width: 600px;
     display: flex;
+    flex-wrap: wrap;
+    //flex-direction: row;
     align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1rem;
+    text-align: center;
+
+    .info {
+      width: 100%;
+      border-bottom: #333 1px solid;
+    }
+
+    p {
+      text-align: left;
+    }
+
     &>div {
-      margin-right: 1rem;
-      padding: 1rem;
+      margin-bottom: 0.5rem;
     }
 
   }
 }
 
 
-// footer
+/* footer */
 footer {
   color: $primary-color;
   background-color: $theme-color;
@@ -398,6 +458,7 @@ footer {
 
   h2 {
     margin-bottom: 1rem;
+
     @media #{$desktop} {
       font-size: 2rem;
     }
@@ -406,6 +467,7 @@ footer {
   ul {
     margin: 0 8%;
   }
+
   li {
     display: inline-block;
     margin: 1vw;
@@ -455,9 +517,3 @@ footer {
   }
 
 }
-
-
-
-
-
-
