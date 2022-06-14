@@ -405,8 +405,8 @@ section {
   margin: 2rem;
 }
 .contact .container iframe {
-  width: 25rem;
-  height: 25rem;
+  width: 100%;
+  height: 85%;
 }
 @media screen and (min-width: 992px) {
   .contact .container iframe {
